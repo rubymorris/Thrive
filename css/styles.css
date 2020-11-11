@@ -1,0 +1,674 @@
+/*navbar*/
+.navbar {
+  min-height: 70px;
+}
+
+.navbar-light .nav-item.active .nav-link {
+  color:  #FF6500;
+}
+
+.navbar-light .nav-item:focus .nav-link {
+color:  #FF6500
+}
+.navbar-light .nav-item:hover .nav-link {
+        color: #FF9E5E;
+}
+
+.navbar-light .nav-item .nav-link {
+  color: #ff6daf;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 70px;
+  line-height: 70px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 20px;
+  }
+}
+
+
+/*indexsection*/
+.indexbody{
+  font-family: 'alata','sans-serif';
+  align-items: center;
+  text-align: center;
+}
+body {
+  padding-top: 20px;  /* allow enough space for a fixed navbar (56px is the height of the navbar here) */
+  min-height: 100vh;  /* i.e minimum width is 100% of the "viewport height"... i.e the full screen height */
+  background-color: white;
+  color: black;
+}
+
+#carouselExampleIndicators img {
+  width: 100%;  /* fit the image within the div */
+  /* FANCY ADVANCED CSS - calc():
+         calculates the height of the full page (100vh)
+         minus the height of the navbar (56px)
+         minus the height of the second-navbar (50px)
+    allocates this height to the carousel images, so that the carousel, navbar, and second-navbar can all fit on the page (regardless of screen size)
+ */
+  height: calc(100vh - 56px - 50px);
+  object-fit: cover;  /* "object-fit" property has various options for fitting an image within a specified space (works because both the img width and height are specified) */
+}
+
+footer {
+  display: flex;  /* allows use of "justify-content" property */
+  justify-content: center;  /* horizontally centers the contents (the social icons) */
+  background-color:white;
+  height: 100px;
+  padding: 20px;
+}
+
+footer a {
+  margin: 5px;
+  text-decoration: none!important;
+}
+
+.social-icon {
+  display: inline-flex;  /* allows use of "justify-content" and "align-items" properties */
+  width: 60px;
+  height: 60px;
+  color:palevioletred;
+  background-color:peachpuff;
+  justify-content: center;  /* horizontally centers the contents (the FontAwesome icon) */
+  align-items: center;  /* vertically centers the contents (the FontAwesome icon) */
+  border-radius: 50%;  /* makes it round (circle if width and height are the same) */
+}
+
+.social-icon:hover {
+  color: #222;  /* change color when hover over the link */
+}
+
+
+#go-top-button {
+  width: 50px;
+  height: 50px;
+  display: none;  /* Hidden by default */
+  position: fixed;  /* Fixed/sticky position */
+  bottom: 20px;  /* Place the button 20px from the bottom of the page */
+  right: 30px;  /* Place the button 30px from the right */
+  z-index: 99;  /* Make sure it does not overlap */
+  border-radius: 50%;  /* makes it round (circle if width and height are the same) */
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front-cloud, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front {
+  background-image: url(flipcard.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  border: 2px black solid;
+}
+
+.flip-card-front-cloud {
+  background-image: url(cloud.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  border: 2px black solid;
+}
+
+/* Style the back side */
+
+.flip-card-back {
+  background-color: #990000;
+  color: white;
+  transform: rotateY(180deg);
+  border: 2px black solid;
+  width: 100%;
+  font-size: large;
+}
+
+#truecard {
+  background-color: #008040;
+}
+
+.flip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flip-card-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#wmhdTable > thead > tr > th{
+  border: black 1px solid;
+}
+
+#wmhdTable > tbody > tr > td{
+  border: black 1px solid;
+}
+
+
+/*GIZEM CSS*/
+
+.tipsbody{
+ font-family: 'alata', sans-serif; 
+}
+
+ * button {
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgba(255, 192, 203, 0.459);
+  border: 5px
+}
+
+#pills-tips * button:hover {background-color: rgba(255, 192, 203, 0.144)}
+
+
+#pills-tips * title {
+  font-size: smaller;
+}
+
+#pills-tips * .tab{
+  background-color: rgba(255, 192, 203, 0.459);
+  border: 1px solid black
+
+}
+
+#pills-wmhd * .tab{
+  background-color: rgba(255, 192, 203, 0.459);
+  border: 1px solid black
+}
+
+#pills-tips * #wmhdTable > thead > tr > th{
+  border: black 1px solid;
+}
+
+#pills-wmhd * #wmhdTable > thead > tr > th{
+  border: black 1px solid;
+}
+
+#pills-tips * #wmhdTable > tbody > tr > td
+{
+  border: black 1px solid;
+}
+
+#pills-wmmhd * #wmhdTable > tbody > tr > td
+{
+  border: black 1px solid;
+}
+
+#pills-tips * #wmhdTable 
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#pills-wmhd * #wmhdTable 
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ #wmhdTable > th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#wmhdTable > th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: white}
+
+#pills-wmhd * td:hover {background-color: white}
+#pills-wmhd * th:hover {background-color: white}
+
+#pills-tips * #wmhdTable > thead > tr > th{
+  border: black 1px solid;
+}
+
+#pills-tips * #wmhdTable > tbody > tr > td
+{
+  border: black 1px solid;
+}
+
+#pills-tips * #wmhdTable 
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#pills-wmhd * #wmhdTable 
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#pills-tips * #wmhdTable > th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#pills-wmhd * #wmhdTable > th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#pills-tips * tr:hover {background-color: white}
+
+#pills-tips * div 
+{font-size: smaller;}
+#pills-tips 
+{font-size: small;}
+#pills-tips * h1 
+{font-weight: bolder;}
+
+
+#pills-tips * .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+
+#pills-tips * .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+#pills-tips * .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+
+#pills-tips * .flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+#pills-tips * .flip-card-front {
+  background-image: url(flipcard.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  border: 2px black solid;
+}
+
+/* Style the back side */
+
+#pills-tips * .flip-card-back {
+  background-color: transparent;
+  color: black;
+  font-size: xx-large;
+  transform: rotateY(180deg);
+  border: 2px black solid;
+  width: 100%;
+}
+
+#pills-tips * #truecard {
+  background-color: transparent;
+}
+
+#pills-tips * .flip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#pills-tips * .flip-card-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#pills-tips {
+  padding: 25px;
+  font-size: 18px;
+}
+
+#pills-wmhd {
+  padding: 25px;
+  font-size: 18px;
+}
+
+#pills-awareness {
+  padding: 25px;
+  font-size: 18px;
+}
+
+#demo {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+
+#pills-tips * .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+  }
+  
+  #pills-tips * .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  #pills-tips * .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  #pills-tips * .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  #pills-tips * .flip-card-front {
+    background-image: url(flipcardtips.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    border: 2px black solid;
+  }
+  
+  
+  #pills-tips * #wmhdTable > tbody > tr > td{
+    border: black 1px solid;
+  }
+
+
+  title {
+    font-size: smaller;
+  }
+  
+  .tab{
+    background-color: #ff6daf41;
+    border: 1px solid black
+  
+  }
+  
+  #wmhdTable > thead > tr > th{
+    border: black 1px solid;
+  }
+  
+  #wmhdTable > tbody > tr > td
+  {
+    border: black 1px solid;
+  }
+  
+  #wmhdTable 
+  {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #wmhdTable > th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {background-color: white}
+  
+  div 
+  {font-size: smaller;}
+  body 
+  {font-size: small;}
+  h1 
+  {font-weight: bolder;}
+  
+  
+  body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 23px;
+  } 
+    #wmhdTable > tbody > tr > td{
+      border: black 1px solid;
+      align-items: center;
+      text-align: center;
+    }
+  
+
+    
+  
+  /*silvya toolkit css*/
+  .toolkitheadings{
+    font-size: x-large;
+    color: #ff6daf;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+  
+  }
+  .toolkitvideo{
+    align-items: center;
+    display: flex;
+    border: black;
+    border-width: 1cm;
+  
+  }
+  .img-thumbnail{
+    position: center;
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    align-items: center;
+    display: block;
+  margin: 0 auto;
+    
+  }
+  .toolkitunorderedlist{
+    list-style-type: none;
+    list-style-position: right;
+  }
+
+  .toolkitlist{
+    list-style-position: right;
+  }
+  
+  .toolkithelplinelist{
+    list-style-type: none;
+    list-style-position: right;  
+    align-items: right;
+  }
+
+ 
+  
+ 
+  .col{
+    font-size: larger;
+    font-stretch: wider;
+    text-align: center;
+  }
+
+  .title{
+    text-align: center;
+    color: #FF9E5E;
+  }
+
+  .subheading{
+    text-align: center;
+    color: #ff9e5e;
+  }
+  .text{
+    text-align: center;
+    color: #ce4993;
+    font-size: medium;
+  }
+  .toolkitvideo{
+    align-content: center;
+    align-items: center;
+    display: block;
+  margin: 0 auto;
+  }
+
+  /*silvya toolkit navbar*/
+
+.nav .nav-link.active{
+  color:  #ff6daf;
+  background-color: wheat;
+}
+
+.nav .nav-link.focus{
+  color:  #FF6500;
+}
+
+.nav .nav-link:hover{
+color:  #FF6500
+}
+.nav .nav-link {
+  color: #ff6daf;
+}
+
+
+
+
+
+  /*rhian awareness css*/
+  .awarenessbody{
+    font-family: 'Alata', sans-serif;
+    align-items: "center";
+    text-align: center;
+
+  }
+  .pages-list{
+    list-style-type: none;
+    color: #ce4993;
+    
+  }
+
+  /*gizem tips css*/
+  .tipsbody{
+    font-family: 'Alata', sans-serif;
+    align-items: "center";
+    text-align: center;
+    
+  }
+  .tips-list{
+    list-style-type: none;
+  }
+  
+/*ruby wmhd css*/
+.wmhdbody{
+  font-family: 'Alata', sans-serif;
+  align-items: "center";
+    text-align: center;
+    
+  }
+
+  .toolkitbody{
+    font-family: 'Alata', sans-serif;
+    align-items: "center";
+    text-align: center;
+  }
+  
+
+/*button*/
+.btn {
+  color: white;
+  background-color: #FF9E5E;
+  border: #ff6daf;
+  
+}
+.btn:hover {
+color: white;
+background-color: #ff6daf;
+}
